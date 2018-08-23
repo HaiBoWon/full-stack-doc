@@ -6,6 +6,7 @@
     * [第一节](section1/section1_c/README.md)
     * [第二节](section1/section2_c/README.md)
       * [第一点](section1/section2_c/README.md)
+        * [小节](section1/section2_c/README.md)
 * [第二章](section2/README.md)
   * [第一节](section2/example1.md)
 
