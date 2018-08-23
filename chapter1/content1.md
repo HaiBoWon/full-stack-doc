@@ -1,6 +1,7 @@
 # WebViewJSBridged 方式
 
-原生注册方法供WebView的JS调用，与之通信。
+原生注册WebView方法供JS调用，实现web与原生通信。
+
 &emsp;&emsp;范德萨
 
 
