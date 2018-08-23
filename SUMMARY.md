@@ -6,11 +6,4 @@
     * [H5原生接入](README.md)
 * [第二章](section2/README.md)
   * [第一节](section2/example1.md)
-  
-
-* [Introduction](README.md)
-  * [test1](test1.md)
-  * [test2](test2.md)
-    * [test3](test3.md)
-  * [test4](test4.md)
 
