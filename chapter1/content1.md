@@ -21,6 +21,6 @@ this:
 +   Booze.
 and this:
 
-1. Candy.
-2. Gum.
-3. Booze.
+1.  Red
+2.  Green
+3.  Blue
