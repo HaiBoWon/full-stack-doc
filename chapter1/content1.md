@@ -1,13 +1,7 @@
-#Candy
+# WebViewJSBridged 方式
 
----
-
->     fsf
-> fsf
-> fsf
-> fsf
-> fsf
-
+原生注册方法供WebView的JS调用，与之通信。
+&emsp;&emsp;范德萨
 
 
 * Gum.
