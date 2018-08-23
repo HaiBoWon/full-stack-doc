@@ -5,4 +5,4 @@
 
 > 当这行很长的文字被包裹的时候，它依然会被恰当的引用。让我们继续写下去来确保包裹它时对于每个人来说它足够长。你可以*在*块引用中使用其它**Markdown**。
 
-[link text itself]:http://www.baidu.com
+[link text itself]: http://www.baidu.com
