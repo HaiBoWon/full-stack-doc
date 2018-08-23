@@ -10,7 +10,7 @@
 [link text itself]: http://www.baidu.com
 
 
-this:
+
 *   Candy.
 *   Gum.
 *   Booze.
