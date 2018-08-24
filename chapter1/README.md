@@ -5,7 +5,7 @@
 > 路由及项目结构配置8.12号
 
 ### 依赖模块
-<span style="color: rgb(184,49,47);">项目是用webpack自定义创建的</span>
+<span style="color: rgb(184,49,47); margin-left:40px;">项目是用webpack自定义创建的</span>
 #### 项目需要安装node.js(https://nodejs.org/en/download/)
 #### 具体依赖如下模块
 - [vue@2.5.17](https://cn.vuejs.org/)
