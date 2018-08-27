@@ -2,7 +2,6 @@
     "plugins": [
         "-lunr",
         "-search",
-        "-highlight",
         "search-plus",
         "expandable-chapters",
         "splitter"
