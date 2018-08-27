@@ -135,7 +135,7 @@ bridge.registerHandler('testJavascriptHandler', function(data, responseCallback)
       responseCallback(responseData)
    })
 ```
-2. 根据第一步注册的handler，发送消息
+2. 根据第一步注册的handler，发送消息<br/>
 第一步注册的<span class="code">handler</span>有两个：testObjcCallback和testJavascriptHandler
 
 Obj-C调用JS：
