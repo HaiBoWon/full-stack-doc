@@ -177,6 +177,35 @@ webView = (BridgeWebView) findViewById(R.id.webView);
    });
 
 ```
+JS中注册handler,给Android调用（JS代码）：
+
+
+```javascript
+bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+      log('ObjC called testJavascriptHandler with', data)
+    var responseData = { 'Javascript Says':'Right back atcha!' }
+    log('JS responding with', responseData)  
+      responseCallback(responseData)
+   })
+
+```
+
+2. 根据第一步注册的`handler`，发送消息<br/>
+第一步注册的`handler`有两个：`testObjcCallback`和`testJavascriptHandler`<br/>
+
+Android调用JS：
+
+
+```javascript
+webView.callHandler("testJavascriptHandler", "{\"foo\":\"before ready\"}", new CallBackFunction() {
+      @Override
+      public void onCallBack(String data) {
+
+      }
+   });
+
+```
+
 
 
 
