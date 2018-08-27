@@ -14,7 +14,6 @@ webView.loadUrl("javascript:show('xxx');");
 
 ```objc
 NSString *result = [self.webView stringByEvaluatingJavaScriptFromString:@"showReturn('xxx');"];
-
 ```
 
 
