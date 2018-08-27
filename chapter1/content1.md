@@ -164,7 +164,7 @@ Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这
 **简单分析**<br/>
 java与js相互调用如下：<br/>
 java发送数据给js，js接收并回传给java<br/>
-同理，js发送数据给java，java接收并回传给js   
+同理，js发送数据给java，java接收并回传给js  
 
 同时两套流程都存在「默认接收」 与 「指定接收」<br/>
 
