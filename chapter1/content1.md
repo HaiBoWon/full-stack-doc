@@ -169,7 +169,6 @@ java发送数据给js，js接收并回传给java
 
 jsBridge与iOS差异部分，关键代码如下：
 
-
 * iOS - jsBridge
 ```javascript
 function _fetchQueue() {
