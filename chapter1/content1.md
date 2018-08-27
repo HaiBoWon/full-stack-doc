@@ -226,7 +226,6 @@ webView = (BridgeWebView) findViewById(R.id.webView);
          function.onCallBack("Response from testObjcCallback");
       }
    });
-
 ```
 JS中注册handler,给Android调用（JS代码）：
 
