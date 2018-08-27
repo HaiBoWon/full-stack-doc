@@ -5,11 +5,10 @@
 ### 原生处理
 
 ```objective-c
-var num = 0;
-for (var i = 0; i < 5; i++) {
-    num+=i;
-}
-console.log(num);
+[self.bridge registerHandler:@"deviceModel" handler:^(id data, WVJBResponseCallback responseCallback) {
+        responseCallback(@"iOS");
+    }];
+
 ```
 
 
