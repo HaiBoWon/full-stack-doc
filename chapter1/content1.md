@@ -195,14 +195,14 @@ function _fetchQueue() {
 function setupWebViewJavascriptBridge(callback) {
      if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
       if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-      // ios初始加载
+      // 通过一个scheme请求初始化ios
       window.WVJBCallbacks = [callback];
       var WVJBIframe = document.createElement('iframe');
       WVJBIframe.style.display = 'none';
       WVJBIframe.src = 'https://__bridge_loaded__';
       document.documentElement.appendChild(WVJBIframe);
       setTimeout(function() { document.documentElement.removeChild(WVJBIframe); }, 0);
-      //兼容Android端
+      //兼容Android端 注册事件监听，初始化
       document.addEventListener(
         'WebViewJavascriptBridgeReady',
         function() {
