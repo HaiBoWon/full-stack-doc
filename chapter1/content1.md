@@ -160,6 +160,24 @@ Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这
 
 ### Android - JsBridge
 
+和WebViewJavascriptBridge类似的android开源[JsBridge](https://github.com/lzyzsd/JsBridge)类库
+
+1. 注册handler<br/>
+Android中注册handler，给JS调用：
+
+
+```java
+webView = (BridgeWebView) findViewById(R.id.webView);
+   webView.registerHandler("testObjcCallback", new BridgeHandler() {
+      @Override
+      public void handler(String data, CallBackFunction function) {
+         Log.i(TAG, "testObjcCallback called: " + data);
+         function.onCallBack("Response from testObjcCallback");
+      }
+   });
+
+```
+
 
 
 
