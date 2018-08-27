@@ -1,6 +1,7 @@
 # WebViewJavascriptBridge 方式
 
-该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，但是安卓也可以统一使用，在初始的时候需要做些兼容处理。
+&emsp;&emsp;该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，这是marcuswestin公司开源的一个用于 iOS/OSX 平台 webview 与 JS 通信的方案，它在 webview 和 JS 之间“架了”一座桥梁，提供了非常便捷的通信方式。
+&emsp;&emsp;安卓也可以统一使用，在初始的时候需要做些兼容处理。
 
 ### 原生处理
 
