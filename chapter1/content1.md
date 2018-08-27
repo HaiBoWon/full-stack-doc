@@ -4,7 +4,7 @@
 
 ### 示例代码
 
-```java
+```javascript
 var num = 0;
 for (var i = 0; i < 5; i++) {
     num+=i;
