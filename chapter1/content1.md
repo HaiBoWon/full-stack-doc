@@ -4,7 +4,7 @@
 
 ### 原生处理
 
-```object-c
+```objective-c
 var num = 0;
 for (var i = 0; i < 5; i++) {
     num+=i;
