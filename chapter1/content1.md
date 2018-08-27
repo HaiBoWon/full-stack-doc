@@ -21,7 +21,6 @@ webview 调用 JS 的方法比较简单，show('xxx') 方法是 JS 中定义的�
 
 
 ```javascript
-<script language=javascript>
    function show(str) {
       alert(str);
    }
@@ -29,7 +28,6 @@ webview 调用 JS 的方法比较简单，show('xxx') 方法是 JS 中定义的�
    function showReturn(str) {
       return "result";
    }
-</script>
 ```
 
 
