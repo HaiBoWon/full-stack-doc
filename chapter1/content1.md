@@ -16,6 +16,24 @@ webView.loadUrl("javascript:show('xxx');");
 NSString *result = [self.webView stringByEvaluatingJavaScriptFromString:@"showReturn('xxx');"];
 ```
 
+webview 调用 JS 的方法比较简单，show('xxx') 方法是 JS 中定义的一个方法：
+
+
+
+```javascript
+<script language=javascript>
+   function show(str) {
+      alert(str);
+   }
+    
+   function showReturn(str) {
+      return "result";
+   }
+</script>
+```
+
+
+
 
 
 ### WebViewJavascriptBridge 方式 android & ios
