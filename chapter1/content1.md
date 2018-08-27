@@ -237,7 +237,6 @@ bridge.registerHandler('testJavascriptHandler', function(data, responseCallback)
     log('JS responding with', responseData)  
       responseCallback(responseData)
    })
-
 ```
 
 2. 根据第一步注册的`handler`，发送消息<br/>
