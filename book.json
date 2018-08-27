@@ -6,6 +6,7 @@
         "search-plus",
         "expandable-chapters",
         "splitter",
-        "prism"
+        "prism",
+        "prism-themes"
     ]
 }
