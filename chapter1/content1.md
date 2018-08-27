@@ -4,8 +4,6 @@
 
 ### 示例代码
 
-
-
 ```javascript
 var num = 0;
 for (var i = 0; i < 5; i++) {
