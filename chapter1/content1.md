@@ -4,7 +4,7 @@
 
 ### 原生处理
 
-```obj-c
+```objc
 [self.bridge registerHandler:@"deviceModel" handler:^(id data, WVJBResponseCallback responseCallback) {
         responseCallback(@"iOS");
     }];
