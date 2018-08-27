@@ -238,8 +238,8 @@ bridge.registerHandler('testJavascriptHandler', function(data, responseCallback)
    })
 ```
 
-2. 根据第一步注册的`handler`，发送消息<br/>
-第一步注册的`handler`有两个：`testObjcCallback`和`testJavascriptHandler`<br/>
+2. 根据第一步注册的`handler`，发送消息  
+第一步注册的`handler`有两个：`testObjcCallback`和`testJavascriptHandler`  
 
 Android调用JS：
 
