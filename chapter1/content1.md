@@ -5,9 +5,13 @@
 ### 原生处理
 
 ```objc
-[self.bridge registerHandler:@"deviceModel" handler:^(id data, WVJBResponseCallback responseCallback) {
-        responseCallback(@"iOS");
-    }];
+self.bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
+   [self.bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
+      // 收到JS的调用
+      NSLog(@"testObjcCallback called: %@", data);
+      // 回调结果给JS
+      responseCallback(@"Response from testObjcCallback");
+   }];
 ```
 
 
