@@ -7,7 +7,6 @@ Android & iOS 调用 JS 的方法，伪代码如下：
 
 ```java
 webView.loadUrl("javascript:show('xxx');");
-
 ```
 
 * iOS
