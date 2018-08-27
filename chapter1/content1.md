@@ -162,11 +162,10 @@ Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这
 
 和WebViewJavascriptBridge类似的android开源[JsBridge](https://github.com/lzyzsd/JsBridge)类库<br/>
 **简单分析**<br/>
-java与js相互调用如下：<br/>
-java发送数据给js，js接收并回传给java<br/>
+java与js相互调用如下：  
+java发送数据给js，js接收并回传给java  
 同理，js发送数据给java，java接收并回传给js  
-
-同时两套流程都存在「默认接收」 与 「指定接收」<br/>
+同时两套流程都存在「默认接收」 与 「指定接收」  
 
 jsBridge与iOS差异部分，关键代码如下：
 
