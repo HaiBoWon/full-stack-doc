@@ -4,24 +4,14 @@
 
 ### 示例代码
 
-`  范德萨`
 
-* Gum.
-* Booze.  
-  this:
 
-* Candy.
+```javascript
+var num = 0;
+for (var i = 0; i < 5; i++) {
+    num+=i;
+}
+console.log(num);
+```
 
-* Gum.
-
-* Booze.
-
-and this:  
-1. Red  
-2. Green  
-3. Blue  
-4. 1312  
-5. 12321  
-6. fsd  
-7. fds
 
