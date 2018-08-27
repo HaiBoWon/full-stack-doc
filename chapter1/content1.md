@@ -1,6 +1,6 @@
 # WebView与JS交互
- Android & iOS 调用 JS 的方法 
- JS 调用 Android & iOS 的方法
+ * Android & iOS 调用 JS 的方法 
+ * JS 调用 Android & iOS 的方法
 
 ** Android & iOS 调用 JS 的方法，伪代码如下：**
 
