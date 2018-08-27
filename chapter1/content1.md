@@ -8,7 +8,6 @@
 [self.bridge registerHandler:@"deviceModel" handler:^(id data, WVJBResponseCallback responseCallback) {
         responseCallback(@"iOS");
     }];
-
 ```
 
 
