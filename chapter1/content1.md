@@ -70,13 +70,12 @@ window.JsToNative.jsMethod(paramFromJS);
 var returnResult = window.JsToNative.jsMethodReturn(paramFromJS);
 ```
 
-
+* iOS
+两种方式：
+* JS 里面直接调用方法
+* JS 里面通过对象调用方法
 
 ### WebViewJavascriptBridge 方式 android & ios
-
-引言:
-webview 与 JS 交互分为两种：
-
 &emsp;&emsp;该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，这是[marcuswestin](https://github.com/marcuswestin)公司开源的一个用于 iOS/OSX 平台 webview 与 JS 通信的方案，它在 webview 和 JS 之间“架了”一座桥梁，提供了非常便捷的通信方式。  
 
 ##### 原生处理
