@@ -39,7 +39,7 @@ show方法必须是 JS 中存在的，即使不存在你调用了也不会报错
 ** JS 调用 Android & iOS 的方法，伪代码如下：**
 
 
-```javascript
+```java
 private class JsToNative {
   // 没有返回结果        
   @JavascriptInterface 
@@ -56,6 +56,18 @@ private class JsToNative {
 
 // JsToNative就是一个别名，你可以随意
 webView.addJavascriptInterface(new JsToNative(), "JsToNative");
+```
+
+JS 调用 Android
+
+
+```javascript
+// 没有返回结果
+var paramFromJS = "xxx";
+window.JsToNative.jsMethod(paramFromJS);
+
+// 有返回结果
+var returnResult = window.JsToNative.jsMethodReturn(paramFromJS);
 ```
 
 
