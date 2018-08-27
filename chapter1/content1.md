@@ -146,6 +146,18 @@ Obj-C调用JS：
       NSLog(@"testJavascriptHandler responded: %@", response);
    }];
 ```
+JS调用Obj-C：
+
+
+```javascript
+bridge.callHandler('testObjcCallback', {'foo': 'bar'}, function(response) {
+      log('JS got response', response)
+   })
+```
+使用起来很简单，主要就是使用registerHandler来注册callback（block），然后使用callHandler来调用注册的callback（block）。
+
+Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这样更易于数据的交互。
+
 
 
 
