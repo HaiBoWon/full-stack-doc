@@ -195,7 +195,7 @@ bridge.registerHandler('testJavascriptHandler', function(data, responseCallback)
 
 Android调用JS：
 
-```javascript
+```java
 webView.callHandler("testJavascriptHandler", "{\"foo\":\"before ready\"}", new CallBackFunction() {
       @Override
       public void onCallBack(String data) {
@@ -204,6 +204,19 @@ webView.callHandler("testJavascriptHandler", "{\"foo\":\"before ready\"}", new C
    });
 
 ```
+
+JS调用Android
+```java
+bridge.callHandler('testObjcCallback', {'foo': 'bar'}, function(response) {
+      log('JS got response', response)
+})
+```
+
+
+
+
+
+
 
 
 
