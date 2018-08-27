@@ -161,6 +161,12 @@ Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这
 ### Android - JsBridge
 
 和WebViewJavascriptBridge类似的android开源[JsBridge](https://github.com/lzyzsd/JsBridge)类库<br/>
+**简单分析**<br/>
+java与js相互调用如下：
+java发送数据给js，js接收并回传给java
+同理，js发送数据给java，java接收并回传给js
+同时两套流程都存在「默认接收」 与 「指定接收」
+
 jsBridge与iOS差异部分，关键代码如下：
 
 
@@ -185,17 +191,25 @@ function _fetchQueue() {
 ```
 
 另外，**jsBridge** 的“加载时机”也有所不同，差异代码如下：
-* iOS - WebViewJavascriptBridge
 ```javascript
 function setupWebViewJavascriptBridge(callback) {
-  if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-  if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-  window.WVJBCallbacks = [callback];
-  var WVJBIframe = document.createElement('iframe');
-  WVJBIframe.style.display = 'none';
-  WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
-  document.documentElement.appendChild(WVJBIframe);
-  setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+     if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+      if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+      // ios初始加载
+      window.WVJBCallbacks = [callback];
+      var WVJBIframe = document.createElement('iframe');
+      WVJBIframe.style.display = 'none';
+      WVJBIframe.src = 'https://__bridge_loaded__';
+      document.documentElement.appendChild(WVJBIframe);
+      setTimeout(function() { document.documentElement.removeChild(WVJBIframe); }, 0);
+      //兼容Android端
+      document.addEventListener(
+        'WebViewJavascriptBridgeReady',
+        function() {
+            callback(WebViewJavascriptBridge);
+        },
+        false
+      );
 }
 ```
 
