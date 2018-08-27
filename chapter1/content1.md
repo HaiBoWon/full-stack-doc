@@ -1,8 +1,9 @@
 # WebView与JS交互
-** Android & iOS 调用 JS 的方法 **
-** JS 调用 Android & iOS 的方法 **
+ Android & iOS 调用 JS 的方法 
+ JS 调用 Android & iOS 的方法
 
-Android & iOS 调用 JS 的方法，伪代码如下：
+** Android & iOS 调用 JS 的方法，伪代码如下：**
+
 * Android
 
 ```java
@@ -34,6 +35,29 @@ webview 调用 JS 的方法比较简单，show('xxx') 方法是 JS 中定义的�
 Android 没法拿到返回值；但是，iOS是可以拿到返回值的，这是最重要的区别！！！另外，我们也无法传递一个回调接口Callback用于回调，也就是说此方法调用成功与否，是无法知道的。
 
 show方法必须是 JS 中存在的，即使不存在你调用了也不会报错；另外，随着业务的增长，我们不得不增加许许多多类似show的方法，来处理其他业务。
+
+** JS 调用 Android & iOS 的方法，伪代码如下：**
+
+
+```javascript
+private class JsToNative {
+  // 没有返回结果        
+  @JavascriptInterface 
+  public void jsMethod(String paramFromJS) { 
+  
+  } 
+
+  // 有返回结果
+  @JavascriptInterface 
+  public String jsMethodReturn(String paramFromJS) { 
+     return "your result";
+  } 
+}
+
+// JsToNative就是一个别名，你可以随意
+webView.addJavascriptInterface(new JsToNative(), "JsToNative");
+```
+
 
 
 ### WebViewJavascriptBridge 方式 android & ios
