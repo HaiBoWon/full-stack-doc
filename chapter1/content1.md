@@ -125,9 +125,6 @@ self.bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
    }];
 ```
 JS中注册handler，给Obj-C调用（JS代码）：
-
-
-
 ```javascript
 bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
       // 收到Obj-C的调用
