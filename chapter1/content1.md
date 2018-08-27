@@ -160,7 +160,30 @@ Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这
 
 ### Android - JsBridge
 
-和WebViewJavascriptBridge类似的android开源[JsBridge](https://github.com/lzyzsd/JsBridge)类库
+和WebViewJavascriptBridge类似的android开源[JsBridge](https://github.com/lzyzsd/JsBridge)类库<br/>
+jsBridge与iOS差异部分，关键代码如下：
+
+
+* iOS - jsBridge
+```javascript
+function _fetchQueue() {
+   var messageQueueString = JSON.stringify(sendMessageQueue);
+   sendMessageQueue = [];
+   return messageQueueString;
+}
+```
+* Android - jsBridge
+
+```javascript
+function _fetchQueue() {      
+   var messageQueueString = JSON.stringify(sendMessageQueue);        
+   sendMessageQueue = [];    
+   // return messageQueueString;        
+   // Android无法直接返回数据, 这是与iOS最大的区别; 所以, 需要使用自定义url形式返回数据。     
+   messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://return/_fetchQueue/' + encodeURIComponent(messageQueueString);   
+}
+```
+
 
 1. 注册handler<br/>
 Android中注册handler，给JS调用：
