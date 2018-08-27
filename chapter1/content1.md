@@ -10,6 +10,13 @@ webView.loadUrl("javascript:show('xxx');");
 
 ```
 
+* iOS
+
+```objc
+NSString *result = [self.webView stringByEvaluatingJavaScriptFromString:@"showReturn('xxx');"];
+
+```
+
 
 
 ### WebViewJavascriptBridge 方式 android & ios
