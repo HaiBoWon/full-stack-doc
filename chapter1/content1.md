@@ -93,6 +93,19 @@ var returnResult = window.JsToNative.jsMethodReturn(paramFromJS);
     }
 }
 ```
+JS调用iOS
+
+
+```javascript
+// 没有返回结果
+var paramFromJS = "xxx";
+jsMethod(paramFromJS);
+
+// 有返回结果
+var returnResult = jsMethodReturn(paramFromJS);
+```
+
+
 
 
 ### WebViewJavascriptBridge 方式 android & ios
