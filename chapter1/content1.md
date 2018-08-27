@@ -212,7 +212,7 @@ function setupWebViewJavascriptBridge(callback) {
 }
 ```
 
-1. 注册handler<br/>
+1. 注册handler  
 Android中注册handler，给JS调用：
 
 
