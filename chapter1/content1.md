@@ -1,7 +1,8 @@
-# WebViewJSBridged 方式
+# WebViewJavascriptBridge 方式
 
-原生创建WebView方法供JS调用，实现web与原生通信。
+该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，但是安卓也可以统一使用，在初始的时候需要做些兼容处理。
 
+### 示例代码
 
 `  范德萨`
 
