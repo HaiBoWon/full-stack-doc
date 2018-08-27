@@ -70,8 +70,7 @@ window.JsToNative.jsMethod(paramFromJS);
 var returnResult = window.JsToNative.jsMethodReturn(paramFromJS);
 ```
 
-* iOS
-   <br/>两种方式：
+* iOS 两种方式：
    - JS 里面直接调用方法
    - JS 里面通过对象调用方法
 
