@@ -105,7 +105,9 @@ jsMethod(paramFromJS);
 var returnResult = jsMethodReturn(paramFromJS);
 ```
 
-
+方式二：JS 里面通过对象调用方法
+这种方式需要使用到 JSExport 协议，类似Android的 @JavascriptInterface 注解。
+这里不做详细讲解，感兴趣的同学可以参考：[这里](http://blog.iderzheng.com/ios7-objects-management-in-javascriptcore-framework/)
 
 
 ### WebViewJavascriptBridge 方式 android & ios
