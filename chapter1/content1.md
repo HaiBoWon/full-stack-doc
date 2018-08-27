@@ -184,6 +184,20 @@ function _fetchQueue() {
 }
 ```
 
+另外，**jsBridge** 的“加载时机”也有所不同，差异代码如下：
+* iOS - WebViewJavascriptBridge
+```javascript
+function setupWebViewJavascriptBridge(callback) {
+  if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+  if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+  window.WVJBCallbacks = [callback];
+  var WVJBIframe = document.createElement('iframe');
+  WVJBIframe.style.display = 'none';
+  WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+  document.documentElement.appendChild(WVJBIframe);
+  setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+}
+```
 
 1. 注册handler<br/>
 Android中注册handler，给JS调用：
