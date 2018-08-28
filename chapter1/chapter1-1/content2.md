@@ -323,6 +323,7 @@ gulp build
   column3-xxx  
   column4-xxx  
 
+
 2. 控制器、服务命名(controllers，services)
 对象命名首字母大写：HomeCtrl，LoginService
 方法命名首字母小写：methodHome
