@@ -182,7 +182,7 @@ npm instsll
        "default"
    ]
 ```
-5. 命令
+5. 命令  
 开发
 ```node
 ionic serve
