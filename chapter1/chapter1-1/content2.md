@@ -142,7 +142,7 @@ gulp.task('watch',["sass","templatecache","ng_annotate"], function() {
 gulp.task('default', ["watch"]);
 gulp.task('build', ['jslint','clean','release']);
 ```
-3. www/index.html 文件合并
+3. www/index.html 文件配置
 ```html
 
 ```
