@@ -205,7 +205,6 @@ bridge.callHandler('testObjcCallback', {'foo': 'bar'}, function(response) {
    })
 ```
 使用起来很简单，主要就是使用`registerHandler`来注册callback（block），然后使用`callHandler`来调用注册的`callback（block）`。  
-
 Obj-C与JS互调，传递数据的格式为String，建议使用JSON格式，这样更易于数据的交互。
 
 ### Android - JsBridge
