@@ -326,7 +326,7 @@ gulp build
 2. 控制器、服务命名(controllers，services)  
 对象命名首字母大写：HomeCtrl，LoginService  
 方法命名首字母小写：methodHome  
-每行代码后加分号  
+每行代码后加分号“;”  
 
 3. css 使用（scss）  
 目前scss已分成三个文件分别对应  
