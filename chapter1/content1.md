@@ -113,9 +113,25 @@ var returnResult = jsMethodReturn(paramFromJS);
 方式二：JS 里面通过对象调用方法  
 凡事添加了JSExport协议的协议，所规定的方法，变量等 就会对js开放，我们可以通过js调用到  
 如果js是一个参数或者没有参数的话 就比较简单，我们的方法名和js的方法名保持一致即可  
-比如：js方法为
+首先创建一个类 继承NSObject 并且规定一个协议  
 ```objc
-testobject.TestOneParameter('参数1')
+#import <Foundation/Foundation.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+ 
+//首先创建一个实现了JSExport协议的协议
+@protocol TestJSObjectProtocol <JSExport>
+ 
+//此处我们测试几种参数的情况
+-(void)TestNOParameter;
+-(void)TestOneParameter:(NSString *)message;
+-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2;
+ 
+@end
+ 
+//让我们创建的类实现上边的协议
+@interface TestJSObject : NSObject<TestJSObjectProtocol>
+ 
+@end
 ```
 
 ### iOS/OSX - WebViewJavascriptBridge
