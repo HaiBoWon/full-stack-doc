@@ -142,7 +142,32 @@ gulp.task('watch',["sass","templatecache","ng_annotate"], function() {
 gulp.task('default', ["watch"]);
 gulp.task('build', ['jslint','clean','release']);
 ```
-3. www/index.html 文件配置
+3. www/index.html 文件设置
 ```html
-
+<!-- 头部设置 -->
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>睿E链金融</title>
+    <!-- build:css dist_css/styles.css -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+    <!-- endbuild -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+    <!-- build:js dist_js/app.js -->
+    <script src="dist/dist_js/app/app.js"></script>
+    <script src="dist/dist_js/app/config.js"></script>
+    <script src="dist/dist_js/app/widget.js"></script>
+    <script src="dist/dist_js/app/controllers.js"></script>
+    <script src="dist/dist_js/app/ngIOS9UIWebViewPatch.js"></script>
+    <script src="dist/dist_js/app/controllers/homeCtrls.js"></script>
+    <script src="dist/dist_js/app/controllers/draftDisctCtrls.js"></script>
+    <script src="dist/dist_js/app/controllers/draftTxnCtrls.js"></script>
+    <script src="dist/dist_js/app/controllers/mineCtrls.js"></script>
+    <script src="dist/dist_js/app/controllers/homeCtrlBus.js"></script>
+    <script src="dist/dist_js/app/services.js"></script>
+    <script src="dist/dist_js/app/services/mineService.js"></script>
+    <script src="dist/dist_js/app/templates.js"></script>
+    <!-- endbuild -->
+  </head>
 ```
