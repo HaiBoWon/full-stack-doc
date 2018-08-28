@@ -171,8 +171,23 @@ gulp.task('build', ['jslint','clean','release']);
     <!-- endbuild -->
   </head>
 ```
-4. 工程构建
-在工程根目录下重构工程
-```node
+4. 工程构建  
+在工程根目录下重构工程  
+```
 npm instsll
+```
+设置ionic默认启动项ionic.project  
+```json
+  "gulpStartupTasks": [
+       "default"
+   ]
+```
+5. 命令
+开发
+```node
+ionic serve
+```
+包发布
+```node
+gulp serve
 ```
