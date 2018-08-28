@@ -1,7 +1,7 @@
 # Summary
 
 * [前端技术](README.md)
-* [APP跨平台交互篇](chapter1/README.md)
+* [移动跨平台交互篇](chapter1/README.md)
   * [H5原生混合](chapter1/chapter1-1/README.md)
     * [ionic混合框架](chapter1/chapter1-1/content1.md)
     * [ionic剥离接入JsBridge](chapter1/chapter1-1/content2.md)
