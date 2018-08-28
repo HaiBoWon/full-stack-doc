@@ -329,7 +329,7 @@ gulp build
 每行代码后加分号“;”  
 
 3. css 使用（scss）  
-目前scss已分成三个文件分别对应  
+可协同编写scss，创建成员样式  
 ionic.app.scss –公共样式  
 ionic.xx1.scss –开发成员1  
 ionic.xx2.scss –开发成员2  
