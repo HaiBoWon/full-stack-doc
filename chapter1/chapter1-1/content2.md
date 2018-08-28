@@ -62,9 +62,6 @@ config.xml
   "dependencies": {}
 }
 ```
-
-
-
 2. 工程化处理配置gulpfile.js，压缩发布版  
 ```javascript
 var gulp = require('gulp');
