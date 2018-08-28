@@ -36,7 +36,7 @@ www/dist/
 config.xml
 ```
 
-### 工程构建
+### 工程重构
 package.json工具包关联配置
 ```json
 {
