@@ -189,5 +189,5 @@ ionic serve
 ```
 包发布
 ```node
-gulp serve
+gulp build
 ```
