@@ -2,7 +2,7 @@
 
 * [前端技术](README.md)
 * [APP跨平台交互篇](chapter1/README.md)
-  * [H5原生混合](chapter1/content1.md)
+  * [H5原生混合](chapter1/#)
     * [初识](chapter1/chapter1-1/content1.md)
   * [JS原生混合](chapter1/content2.md)
   * [多平台一键打包](chapter1/content3.md)
