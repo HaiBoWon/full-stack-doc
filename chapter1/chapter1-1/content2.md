@@ -22,8 +22,6 @@
 
 2. 设置git版本管理的过滤文件.gitignore  
 ```
-
-
 node_modules/
 hooks/
 resources/
@@ -33,7 +31,6 @@ www/dist/
 .idea/
 .DS_store
 config.xml
-
 ```
 
 ### 工程重构
