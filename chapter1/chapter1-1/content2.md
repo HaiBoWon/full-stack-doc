@@ -202,14 +202,9 @@ gulp build
 |   +-- services/                           --- 业务接口服务层目录
 |   --- app.js                              --- 页面跳转路由配置
 |   --- config.js                           --- 项目基础配置
-|   --- controllers.js                      --- 第三方依赖库
-|   --- services.js                         --- 模版文件
-|   --- widget.js                           --- 主入口
-+-- node_modules/                           --- npm下载文件目录
---- .gitignore                              --- git文件过滤配置  
---- package.json                            --- 配置文件    
---- gulpfile.json                           --- 工程化配置   
---- ionic.project                           --- 工程化配置 
+|   --- controllers.js                      --- 全局控制初始化设置
+|   --- services.js                         --- 全局服务包含统一请求处理和小工具
+|   --- widget.js                           --- 自定义标签或者属性小工具
 ```
 
 ### WebViewJavascriptBridge开发
