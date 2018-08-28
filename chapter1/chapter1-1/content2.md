@@ -19,7 +19,7 @@
 --- README.md                               --- 说明文档                                       
 ```
 
-另设置git过滤
+设置git版本管理的过滤文件.gitignore
 ```
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
