@@ -187,11 +187,11 @@ npm instsll
 ```
 5. 命令  
 开发
-```node
+```
 ionic serve
 ```
 发布 放入到原生APP指定的访问目录
-```node
+```
 gulp build
 ```
 
