@@ -308,3 +308,29 @@ gulp build
 ```
 
 ### 编码要求
+1. 页面命名(tmplate)
+公共页面  
+在tab四栏中基本每栏都会触发显示的共同页面，请使用前缀“前缀-”,登录、注册、忘记密码不包含可以保持原样。
+1、tab页面命名
+tab-home –主页
+tab-rongzi –融资
+tab-zhuanrang –转让
+tab-mine –我的
+2、tab栏下的页面命名
+home-xxx
+rongzi-xxx
+zrang-xxx
+mine-xxx
+2. 控制器和对象命名(controllers，services)
+首字母大写，比如：HomeCtrl，LoginService
+其中/controllers下的是每个tab栏的控制器：
+homeCtrls –首页下相关版块控制器
+rongziCtrls –融资下相关版块控制器
+zrangCtrls –转让下相关版块控制器
+mineCtrls –我的下相关版块控制器
+3. css 使用（scss）
+目前scss已分成三个文件分别对应
+ionic.app.scss –公共样式
+ionic.cd.scss –成丹
+ionic.hhs.scss –黄海生
+关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss
