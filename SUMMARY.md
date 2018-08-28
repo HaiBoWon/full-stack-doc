@@ -1,6 +1,6 @@
 # Summary
 
-* [全栈技术](README.md)
+* [前端技术](README.md)
 * [APP跨平台交互篇](chapter1/README.md)
   * [H5原生混合](chapter1/content1.md)
   * [JS原生混合](chapter1/content2.md)
