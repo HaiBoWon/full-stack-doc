@@ -272,7 +272,6 @@ webView = (BridgeWebView) findViewById(R.id.webView);
       }
    });
 ```
-
 JS中注册handler,给Android调用（JS代码）：
 ```javascript
 bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
