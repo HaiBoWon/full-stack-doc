@@ -287,7 +287,6 @@ bridge.registerHandler('testJavascriptHandler', function(data, responseCallback)
 第一步注册的`handler`有两个：`testObjcCallback`和`testJavascriptHandler`  
 
 Android调用JS：
-
 ```java
 webView.callHandler("testJavascriptHandler", "{\"foo\":\"before ready\"}", new CallBackFunction() {
       @Override
