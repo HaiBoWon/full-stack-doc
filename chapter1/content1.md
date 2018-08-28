@@ -133,6 +133,37 @@ var returnResult = jsMethodReturn(paramFromJS);
  
 @end
 ```
+类的实现  
+```objc
+#import "TestJSObject.h"
+ 
+@implementation TestJSObject
+ 
+//一下方法都是只是打了个log 等会看log 以及参数能对上就说明js调用了此处的iOS 原生方法
+-(void)TestNOParameter
+{
+    NSLog(@"this is ios TestNOParameter");
+}
+-(void)TestOneParameter:(NSString *)message
+{
+    NSLog(@"this is ios TestOneParameter=%@",message);
+}
+-(void)TestTowParameter:(NSString *)message1 SecondParameter:(NSString *)message2
+{
+   NSLog(@"this is ios TestTowParameter=%@  Second=%@",message1,message2);
+}
+@end
+```
+JS调用iOS
+
+
+```javascript
+window.testobject.TestNOParameter();
+window.testobject.TestOneParameter('参数1');
+window.testobject.TestTowParameterSecondParameter('参数a','参数b')
+```
+
+
 
 ### iOS/OSX - WebViewJavascriptBridge
 &emsp;&emsp;该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，这是[marcuswestin](https://github.com/marcuswestin)公司开源的一个用于 iOS/OSX 平台 webview 与 JS 通信的方案，它在 webview 和 JS 之间“架了”一座桥梁，提供了非常便捷的通信方式。  
