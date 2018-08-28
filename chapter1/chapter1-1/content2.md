@@ -311,16 +311,16 @@ gulp build
 1. 页面命名(tmplate)
 公共页面  
 在tab四栏中基本每栏都会触发显示的共同页面，请使用前缀“前缀-”,登录、注册、忘记密码不包含可以保持原样。
-1、tab页面命名
-tab-home –主页
-tab-rongzi –融资
-tab-zhuanrang –转让
-tab-mine –我的
-2、tab栏下的页面命名
-home-xxx
-rongzi-xxx
-zrang-xxx
-mine-xxx
+1、底部导航tab页面命名
+tab-column1 –第一个栏目
+tab-column2 –第二个栏目
+tab-column3 –第三个栏目
+tab-column4 –第四个栏目
+2、tab栏下分支页面命名
+column1-xxx
+column2-xxx
+column3-xxx
+column4-xxx
 2. 控制器和对象命名(controllers，services)
 首字母大写，比如：HomeCtrl，LoginService
 其中/controllers下的是每个tab栏的控制器：
