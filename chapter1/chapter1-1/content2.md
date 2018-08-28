@@ -197,14 +197,14 @@ gulp build
 
 ### 开发原文件功能介绍
 ```
-+-- js/                                    --- 开发主目录
-|   +-- controllers/                                --- 根据样式原文件生成的样式文件 
-|   +-- services/                               --- 打包发布的文件目录
-|   --- app.js                                --- 开发资源图片目录
-|   --- config.js                                 --- 开发js代码目录
-|   --- controllers.js                                --- 第三方依赖库
-|   --- services.js                           --- 模版文件
-|   --- widget.js                          --- 主入口
++-- js/                                     --- 开发主目录
+|   +-- controllers/                        --- 根据样式原文件生成的样式文件 
+|   +-- services/                           --- 打包发布的文件目录
+|   --- app.js                              --- 开发资源图片目录
+|   --- config.js                           --- 开发js代码目录
+|   --- controllers.js                      --- 第三方依赖库
+|   --- services.js                         --- 模版文件
+|   --- widget.js                           --- 主入口
 +-- node_modules/                           --- npm下载文件目录
 --- .gitignore                              --- git文件过滤配置  
 --- package.json                            --- 配置文件    
