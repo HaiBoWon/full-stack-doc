@@ -113,7 +113,10 @@ var returnResult = jsMethodReturn(paramFromJS);
 方式二：JS 里面通过对象调用方法  
 凡事添加了JSExport协议的协议，所规定的方法，变量等 就会对js开放，我们可以通过js调用到  
 如果js是一个参数或者没有参数的话 就比较简单，我们的方法名和js的方法名保持一致即可  
-
+比如：js方法为
+```objc
+testobject.TestOneParameter('参数1')
+```
 
 ### iOS/OSX - WebViewJavascriptBridge
 &emsp;&emsp;该方式主要作用于Objective-C 和 javascript 相互通信，即 oc和 js 方法的互相调用，这是[marcuswestin](https://github.com/marcuswestin)公司开源的一个用于 iOS/OSX 平台 webview 与 JS 通信的方案，它在 webview 和 JS 之间“架了”一座桥梁，提供了非常便捷的通信方式。  
