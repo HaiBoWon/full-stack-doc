@@ -292,9 +292,7 @@ webView.callHandler("testJavascriptHandler", "{\"foo\":\"before ready\"}", new C
 
       }
    });
-
 ```
-
 JS调用Android
 ```java
 bridge.callHandler('testObjcCallback', {'foo': 'bar'}, function(response) {
