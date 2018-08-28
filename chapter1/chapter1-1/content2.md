@@ -34,3 +34,99 @@ www/dist/
 .DS_store
 config.xml
 ```
+
+package.json包关联配置
+
+
+工程化处理配置gulpfile.js
+```javascript
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var cleanCss = require('gulp-clean-css');
+var rename = require('gulp-rename');          //文件重命名
+var useref=require('gulp-useref');            //合并文件
+var uglify=require('gulp-uglify');            //js压缩
+var jshint=require('gulp-jshint');            //js检查
+var clean =require('gulp-clean');             //文件清理
+var notify=require('gulp-notify');            //提示
+var templateCache = require('gulp-angular-templatecache');
+var ngAnnotate = require('gulp-ng-annotate');
+
+var paths = {
+  sass: ['./scss/**/*.scss'],
+  templatecache: ['./www/template/**/*.html'],
+  ng_annotate: ['./www/js/**/*.js'],
+  useref: ['./www/*.html']
+};
+
+gulp.task('sass', function(done) {
+  gulp.src('./scss/ionic.app.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(gulp.dest('./www/css/'))
+    .pipe(cleanCss({
+      keepSpecialComments: 0
+    }))
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./www/css/'))
+    .on('end', done);
+});
+
+gulp.task('jslint', function() {
+  return gulp.src('./www/js/**/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+// 合并html到js
+gulp.task('templatecache', function (done) {
+  gulp.src('./www/template/**/*.html')
+    .pipe(templateCache({standalone:true}))
+    .pipe(gulp.dest('./www/js'))
+    .on('end', done);
+});
+
+// 补足语法规则，文件重新定位文件
+gulp.task('ng_annotate',['jslint'], function (done) {
+  gulp.src('./www/js/**/*.js')
+    .pipe(ngAnnotate({single_quotes: true}))
+    .pipe(gulp.dest('./www/dist/dist_js/app'))
+    .on('end', done);
+});
+
+// 合并文件到dist目录
+gulp.task('useref',["ng_annotate"], function (done) {
+  gulp.src('./www/*.html')
+    .pipe(useref())
+    .pipe(gulp.dest('./www/dist'))
+    .on('end', done);
+});
+
+// JS处理
+gulp.task('minifyjs',["useref"],function(){
+  return gulp.src(['./www/dist/dist_js/app.js'])
+    .pipe(uglify())                               // 压缩
+    .pipe(gulp.dest('./www/dist/dist_js/'))       // 输出
+    .pipe(notify({message:"Build OK"}));        // 提示
+});
+
+gulp.task('clean',["minifyjs"], function (done) {
+  gulp.src(['./www/dist/dist_js/app'])
+    .pipe(clean());
+});
+
+gulp.task('release',function() {
+  gulp.src(['./www/**/*.*','!./www/template/**','!./www/js/**','!./www/css/**','!./www/dist/**','!./www/index.html'])
+    .pipe(gulp.dest('./www/dist/'));
+
+});
+
+gulp.task('watch',["sass","templatecache","ng_annotate"], function() {
+  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.templatecache, ['templatecache']);
+  gulp.watch(paths.ng_annotate, ['ng_annotate']);
+});
+
+gulp.task('default', ["watch"]);
+gulp.task('build', ['jslint','clean','release']);
+```
