@@ -312,16 +312,16 @@ gulp build
 公共页面  
 在tab四栏中基本每栏都会触发显示的共同页面，请使用前缀“前缀-”,登录、注册、忘记密码不包含可以保持原样。
 
-  * 底部导航tab页面命名
-tab-column1 –第一个栏目
-tab-column2 –第二个栏目
-tab-column3 –第三个栏目
-tab-column4 –第四个栏目
-  * tab栏下分支页面命名
-column1-xxx
-column2-xxx
-column3-xxx
-column4-xxx
+  * 底部导航tab页面命名  
+tab-column1 –第一个栏目  
+tab-column2 –第二个栏目  
+tab-column3 –第三个栏目  
+tab-column4 –第四个栏目  
+  * tab栏下分支页面命名  
+column1-xxx  
+column2-xxx  
+column3-xxx  
+column4-xxx  
 
 2. 控制器、服务命名(controllers，services)
 对象命名首字母大写：HomeCtrl，LoginService
