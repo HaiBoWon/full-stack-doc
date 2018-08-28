@@ -222,7 +222,6 @@ function _fetchQueue() {
 }
 ```
 * Android - jsBridge
-
 ```javascript
 function _fetchQueue() {      
    var messageQueueString = JSON.stringify(sendMessageQueue);        
