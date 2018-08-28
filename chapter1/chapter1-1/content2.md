@@ -323,14 +323,14 @@ gulp build
   column3-xxx  
   column4-xxx  
 
-2. 控制器、服务命名(controllers，services)
-对象命名首字母大写：HomeCtrl，LoginService
-方法命名首字母小写：methodHome
-每行代码后加分号
+2. 控制器、服务命名(controllers，services)  
+对象命名首字母大写：HomeCtrl，LoginService  
+方法命名首字母小写：methodHome  
+每行代码后加分号  
 
-3. css 使用（scss）
-目前scss已分成三个文件分别对应
-ionic.app.scss –公共样式
-ionic.xx1.scss –开发成员1
-ionic.xx2.scss –开发成员2
-关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss
+3. css 使用（scss）  
+目前scss已分成三个文件分别对应  
+ionic.app.scss –公共样式  
+ionic.xx1.scss –开发成员1  
+ionic.xx2.scss –开发成员2  
+关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss  
