@@ -262,8 +262,6 @@ java发送数据给js，js接收并回传给java
 
 1. 注册handler  
 Android中注册handler，给JS调用：
-
-
 ```java
 webView = (BridgeWebView) findViewById(R.id.webView);
    webView.registerHandler("testObjcCallback", new BridgeHandler() {
@@ -274,9 +272,8 @@ webView = (BridgeWebView) findViewById(R.id.webView);
       }
    });
 ```
+
 JS中注册handler,给Android调用（JS代码）：
-
-
 ```javascript
 bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
       log('ObjC called testJavascriptHandler with', data)
