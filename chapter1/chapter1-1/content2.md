@@ -190,7 +190,7 @@ npm instsll
 ```node
 ionic serve
 ```
-包发布
+包发布放入到原生APP指定的访问目录
 ```node
 gulp build
 ```
