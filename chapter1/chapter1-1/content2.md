@@ -36,7 +36,7 @@ config.xml
 ```
 
 ### 工程重构
-  1. package.json修改工具包依赖配置
+1. package.json修改工具包依赖配置
 ```json
 {
   "name": "zxscf",
@@ -65,7 +65,7 @@ config.xml
 
 
 
-  2. 工程化处理配置gulpfile.js，压缩发布版  
+2. 工程化处理配置gulpfile.js，压缩发布版  
 ```javascript
 
 var gulp = require('gulp');
