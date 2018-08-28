@@ -2,7 +2,7 @@
 &emsp;&emsp;为了能灵活嵌入以native view为主的APP应用，并能接入APP接口，且业务代码能够较快速的转移保留功能的完整性。ionic框架结合原生接入要求做了相应调整，以便适应开发场景，能够快速开发。  
 在这里以一个已实施的ionic项目开始讲解  
 ### 工程文件整理
-在原有项目目录清理后保留如下：
+1. 在原有项目目录清理后保留如下：
 ```
 +-- www(开发主目录)/                      ---打包的文件目录
 |   +-- css/                                --- 打包后的样式目录 
@@ -20,7 +20,7 @@
 --- README.md                               --- 说明文档                                       
 ```
 
-设置git版本管理的过滤文件.gitignore
+2. 设置git版本管理的过滤文件.gitignore
 ```
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
@@ -37,7 +37,7 @@ config.xml
 ```
 
 ### 工程重构
-package.json修改工具包依赖配置
+1. package.json修改工具包依赖配置
 ```json
 {
   "name": "zxscf",
@@ -64,7 +64,7 @@ package.json修改工具包依赖配置
 }
 ```
 
-工程化处理配置gulpfile.js，压缩发布版
+2. 工程化处理配置gulpfile.js，压缩发布版
 ```js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
