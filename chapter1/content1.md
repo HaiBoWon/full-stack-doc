@@ -156,7 +156,6 @@ var returnResult = jsMethodReturn(paramFromJS);
 ```
 JS调用iOS
 
-
 ```javascript
 window.testobject.TestNOParameter();
 window.testobject.TestOneParameter('参数1');
