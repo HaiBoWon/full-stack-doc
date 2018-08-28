@@ -208,7 +208,7 @@ gulp build
 ```
 
 ### WebViewJavascriptBridge开发
-##### 1. 定义和初始化WebViewJavascriptBridge，在js/controllers.js的InitCtrl中设置
+1. 定义和初始化WebViewJavascriptBridge，在js/controllers.js的InitCtrl中设置
 ```javascript
   // 创建原生链接初始化方法
     window.setupWebViewJavascriptBridge = function(callback) {
@@ -268,9 +268,7 @@ gulp build
       }
     });
 ```
-
-
-##### 2. 请求模块改造
+2. 请求模块改造
 ##### 3. 业务对象字段调整
 
 ### 编写规范
