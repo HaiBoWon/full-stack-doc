@@ -64,7 +64,7 @@ package.json修改工具包依赖配置
 }
 ```
 
-工程化处理配置gulpfile.js
+工程化处理配置gulpfile.js，压缩发布版
 ```js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
