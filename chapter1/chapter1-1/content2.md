@@ -67,7 +67,6 @@ config.xml
 
 2. 工程化处理配置gulpfile.js，压缩发布版  
 ```javascript
-
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCss = require('gulp-clean-css');
