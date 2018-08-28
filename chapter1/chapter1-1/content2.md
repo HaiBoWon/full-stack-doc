@@ -21,7 +21,7 @@
 ```
 
 2. 设置git版本管理的过滤文件.gitignore  
-```js
+```
 
 
 node_modules/
