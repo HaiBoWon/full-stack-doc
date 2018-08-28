@@ -35,8 +35,32 @@ www/dist/
 config.xml
 ```
 
-package.json包关联配置
-
+package.json工具包关联配置
+```json
+{
+  "name": "zxscf",
+  "version": "1.1.1",
+  "description": "An Ionic project",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-angular-templatecache": "^2.2.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-ng-annotate": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "jshint": "^2.9.6"
+  },
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [],
+  "dependencies": {}
+}
+```
 
 工程化处理配置gulpfile.js
 ```javascript
