@@ -262,7 +262,6 @@ function setupWebViewJavascriptBridge(callback) {
 ```
 
 **简单分析java与js相互调用如下: **    
-
 java发送数据给js，js接收并回传给java  
 同理，js发送数据给java，java接收并回传给js  
 同时两套流程都存在「默认接收」 与 「指定接收」 
