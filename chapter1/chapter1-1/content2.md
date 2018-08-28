@@ -268,7 +268,44 @@ gulp build
       }
     });
 ```
-2. 请求模块改造
+2. 请求模块改造，在js/services.js添加原生访问对象Mobridge
+```javascript
+  // 统一APP原生请求方法
+  .factory('Mobridge', function ($q) {
+    return {
+      // 根据原生标识调用原生组件
+      callHandler:function (interfaceId,options) {
+        var deferred = $q.defer();
+        var opts = options || {};
+        if(window.bridge == undefined){
+          deferred.reject();
+        }else{
+          window.bridge.callHandler(interfaceId,opts,function(data){
+            if (typeof data == "string"){
+              deferred.resolve(JSON.parse(data));
+            }else{
+              deferred.resolve(data);
+            }
+          });
+        }
+        return deferred.promise;
+      },
+      // 根据原生指定的code码调用业务接口
+      callHandlerByCode:function (code,options) {
+        var perfix = "ucspss";
+        var opts = options || {};
+        if (typeof opts == 'object') {
+          for (var p in opts) {
+            if(typeof opts[p] !== "string"){
+              opts[p] = opts[p] + "";
+            }
+          }
+        }
+        return this.callHandler('serverRequest',{'transcode': perfix+code, 'body':opts});
+      }
+    };
+  })
+```
 ##### 3. 业务对象字段调整
 
 ### 编写规范
