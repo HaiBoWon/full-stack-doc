@@ -79,5 +79,22 @@ var clean =require('gulp-clean');             //文件清理
 var notify=require('gulp-notify');            //提示
 var templateCache = require('gulp-angular-templatecache');
 var ngAnnotate = require('gulp-ng-annotate');
-
+var paths = {
+  sass: ['./scss/**/*.scss'],
+  templatecache: ['./www/template/**/*.html'],
+  ng_annotate: ['./www/js/**/*.js'],
+  useref: ['./www/*.html']
+};
+gulp.task('sass', function(done) {
+  gulp.src('./scss/ionic.app.scss')
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(gulp.dest('./www/css/'))
+    .pipe(cleanCss({
+      keepSpecialComments: 0
+    }))
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./www/css/'))
+    .on('end', done);
+});
 ```
