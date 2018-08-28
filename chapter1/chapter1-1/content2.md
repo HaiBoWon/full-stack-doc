@@ -34,5 +34,3 @@ www/dist/
 .DS_store
 config.xml
 ```
-
-## 
