@@ -133,6 +133,7 @@ gulp.task('minifyjs',["useref"],function(){
 gulp.task('clean',["minifyjs"], function (done) {
   gulp.src(['./www/dist/dist_js/app'])
     .pipe(clean());
+    
 });
 gulp.task('release',function() {  gulp.src(['./www/**/*.*','!./www/template/**','!./www/js/**','!./www/css/**','!./www/dist/**','!./www/index.html'])
     .pipe(gulp.dest('./www/dist/'));
