@@ -2,7 +2,7 @@
 此案例基于已实施的ionic项目为起始讲解
 
 ### 开发应用目录
-目录
+在原有项目目录清理后保留如下：
 ```
 +-- www(开发主目录)/                      ---打包的文件目录
 |   +-- css/                                --- 打包后的样式目录 
@@ -19,7 +19,20 @@
 --- README.md                               --- 说明文档                                       
 ```
 
+另设置git过滤
+```
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
 
-
+node_modules/
+hooks/
+resources/
+platforms/
+plugins/
+www/dist/
+.idea/
+.DS_store
+config.xml
+```
 
 ## 
