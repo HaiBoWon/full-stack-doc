@@ -37,7 +37,7 @@ config.xml
 
 ### 工程重构
 
-1.trrst
+1. trrst
 ```javascript  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
