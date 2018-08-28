@@ -171,3 +171,8 @@ gulp.task('build', ['jslint','clean','release']);
     <!-- endbuild -->
   </head>
 ```
+4. 工程构建
+在工程根目录下重构工程
+```node
+npm instsll
+```
