@@ -136,7 +136,7 @@ gulp.task('clean',["minifyjs"], function (done) {
 }); 
 gulp.task('release',function() {  gulp.src(['./www/**/*.*','!./www/template/**','!./www/js/**','!./www/css/**','!./www/dist/**','!./www/index.html'])
     .pipe(gulp.dest('./www/dist/'));
-});
+});&amp;&nbsp;
 gulp.task('watch',["sass","templatecache","ng_annotate"], function() {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.templatecache, ['templatecache']);
