@@ -37,7 +37,7 @@ config.xml
 ```
 
 ### 工程重构
-package.json工具包关联配置
+package.json修改工具包依赖配置
 ```json
 {
   "name": "zxscf",
