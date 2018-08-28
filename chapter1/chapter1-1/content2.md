@@ -63,7 +63,7 @@ config.xml
 "dependencies": {}
 }
 ```
-2. 工程化处理配置gulpfile.js，压缩发布版  
+2. 工程化处理配置gulpfile.js  
 ```javascript  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -142,4 +142,7 @@ gulp.task('watch',["sass","templatecache","ng_annotate"], function() {
 gulp.task('default', ["watch"]);
 gulp.task('build', ['jslint','clean','release']);
 ```
-3. 
+3. www/index.html 文件合并
+```html
+
+```
