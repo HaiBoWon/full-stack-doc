@@ -78,7 +78,14 @@ var returnResult = window.JsToNative.jsMethodReturn(paramFromJS);
 
 ```objc
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    //网页加载完成调用此方法
+    //iOS调用js
+    //首先创建JSContext 对象（此处通过当前webView的键获取到jscontext
     JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    //js调用iOS
+    //第一种情况
+    //其中test1就是js的方法名称，赋给是一个block 里面是iOS代码
+    //此方法最终将打印出所有接收到的参数，js参数是不固定的 我们测试一下就知道
     context[@"jsMethod"] = ^() { 
         NSArray *args = [JSContext currentArguments];  
         for (id obj in args) {  
@@ -103,9 +110,9 @@ jsMethod(paramFromJS);
 var returnResult = jsMethodReturn(paramFromJS);
 ```
 
-方式二：JS 里面通过对象调用方法
-这种方式需要使用到 JSExport 协议，类似Android的 @JavascriptInterface 注解。
-这里不做详细讲解，感兴趣的同学可以参考：[这里](http://blog.iderzheng.com/ios7-objects-management-in-javascriptcore-framework/)
+方式二：JS 里面通过对象调用方法  
+凡事添加了JSExport协议的协议，所规定的方法，变量等 就会对js开放，我们可以通过js调用到  
+如果js是一个参数或者没有参数的话 就比较简单，我们的方法名和js的方法名保持一致即可  
 
 
 ### iOS/OSX - WebViewJavascriptBridge
