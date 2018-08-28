@@ -15,7 +15,7 @@
 |   +-- lib/                                --- 第三方依赖库
 |   +-- template/                           --- 模版文件
 |   --- index.html                          --- 主入口
-+-- node_modules/                           --- npm下载文件目录
++-- node_modules/                           --- npm下载文件目录，清空稍后会重新安装
 --- .gitignore                              --- git文件过滤配置  
 --- package.json                            --- 配置文件    
 --- gulpfile.json                           --- 工程化配置   
