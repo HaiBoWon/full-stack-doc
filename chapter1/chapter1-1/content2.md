@@ -311,26 +311,25 @@ gulp build
 1. 页面命名(tmplate)
 公共页面  
 在tab四栏中基本每栏都会触发显示的共同页面，请使用前缀“前缀-”,登录、注册、忘记密码不包含可以保持原样。
-1、底部导航tab页面命名
+* 底部导航tab页面命名
 tab-column1 –第一个栏目
 tab-column2 –第二个栏目
 tab-column3 –第三个栏目
 tab-column4 –第四个栏目
-2、tab栏下分支页面命名
+* tab栏下分支页面命名
 column1-xxx
 column2-xxx
 column3-xxx
 column4-xxx
-2. 控制器和对象命名(controllers，services)
-首字母大写，比如：HomeCtrl，LoginService
-其中/controllers下的是每个tab栏的控制器：
-homeCtrls –首页下相关版块控制器
-rongziCtrls –融资下相关版块控制器
-zrangCtrls –转让下相关版块控制器
-mineCtrls –我的下相关版块控制器
+
+2. 控制器、服务命名(controllers，services)
+对象命名首字母大写：HomeCtrl，LoginService
+方法命名首字母小写：methodHome
+每行代码后加分号
+
 3. css 使用（scss）
 目前scss已分成三个文件分别对应
 ionic.app.scss –公共样式
-ionic.cd.scss –成丹
-ionic.hhs.scss –黄海生
+ionic.xx1.scss –开发成员1
+ionic.xx2.scss –开发成员2
 关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss
