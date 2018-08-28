@@ -3,7 +3,7 @@
 &emsp;&emsp;在这里以一个已实施的ionic项目开始讲解 
 
 ### 开发准备 
-#### 1. 工程文件整理
+##### 1. 工程文件整理
 1. 在原有项目目录清理后保留如下：
 ```
 +-- scss/                                   --- 样式原文件
@@ -38,7 +38,7 @@ www/dist/
 config.xml
 ```
 
-#### 2. 工程重构
+##### 2. 工程重构
 
 1. package.json修改工具包依赖配置
 ```json
@@ -208,7 +208,7 @@ gulp build
 ```
 
 ### WebViewJavascriptBridge开发
-#### 1. 定义和初始化WebViewJavascriptBridge，在js/controllers.js的InitCtrl中设置
+##### 1. 定义和初始化WebViewJavascriptBridge，在js/controllers.js的InitCtrl中设置
 ```javascript
   // 创建原生链接初始化方法
     window.setupWebViewJavascriptBridge = function(callback) {
@@ -270,7 +270,7 @@ gulp build
 ```
 
 
-#### 2. 请求模块改造
-#### 3. 业务对象字段调整
+##### 2. 请求模块改造
+##### 3. 业务对象字段调整
 
 ### 编写规范
