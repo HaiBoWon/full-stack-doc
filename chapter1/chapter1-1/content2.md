@@ -63,7 +63,7 @@ package.json工具包关联配置
 ```
 
 工程化处理配置gulpfile.js
-```javascript
+```js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCss = require('gulp-clean-css');
