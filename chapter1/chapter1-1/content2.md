@@ -229,6 +229,44 @@ gulp build
         false
       );
     };
+    
+       // 应用初始载入时调用一次
+    $scope.$on('$ionicView.loaded',function(){
+      // 初始化原生接入
+      if(!window.bridge){
+        window.setupWebViewJavascriptBridge(function(bridge) {
+          window.bridge = bridge;
+          //初始化,Android用到
+          if(bridge.init && typeof(bridge.init)=="function") {
+            console.log("call bridge.init");
+            bridge.init(function(message, responseCallback) {
+              console.log("call bridge.init finished");
+              var data = {
+                'Javascript Responds': 'Wee!'
+              };
+              responseCallback(data);
+            });
+          }
+          //------注册供原生调用的方方--------
+          //android返回处理,处理页面跳转或否则处理退出app
+          bridge.registerHandler('androidBack', function(data, responseCallback) {
+            if($location.path() == '/tab/home' || $location.path() == '/tab/draftDisctOn' || $location.path() == '/tab/draftTxnOn' || $location.path() == '/tab/mine'){
+              responseCallback(true);
+            }else{
+              responseCallback(false);
+              $ionicHistory.goBack(-1);
+            }
+          });
+          bridge.registerHandler('',function(data,callback){
+            console.log(data);
+            callback('收到++');
+          });
+
+          // 设置需要的初始项
+          initData();
+        });
+      }
+    });
 ```
 
 #### 1. 初始化WebViewJavascriptBridge
