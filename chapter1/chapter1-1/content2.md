@@ -68,17 +68,5 @@ config.xml
 
 2. 工程化处理配置gulpfile.js，压缩发布版  
 ```javascript  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cleanCss = require('gulp-clean-css');
-var rename = require('gulp-rename');          //文件重命名
-var useref=require('gulp-useref');            //合并文件
-var uglify=require('gulp-uglify');            //js压缩
-var jshint=require('gulp-jshint');            //js检查
-var clean =require('gulp-clean');             //文件清理
-var notify=require('gulp-notify');            //提示
-var templateCache = require('gulp-angular-templatecache');
-var ngAnnotate = require('gulp-ng-annotate');
-
-
+alert(312);
 ```
