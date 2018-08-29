@@ -339,3 +339,5 @@ ionic.app.scss –公共样式
 ionic.xx1.scss –开发成员1  
 ionic.xx2.scss –开发成员2  
 关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss  
+
+4. 函数和接口书写规范
