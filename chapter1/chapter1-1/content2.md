@@ -327,28 +327,14 @@ column2-xxx
 column3-xxx  
 column4-xxx 
 
-* 控制器&服务命名
+* 控制器&服务命名(controllers，services)  
 
+首字母大写，例：
+HomeCtrl
+LoginService  
 
-1. 页面命名(tmplate)
-公共页面  
-在tab四栏中基本每栏都会触发显示的共同页面，请使用前缀“前缀-”,登录、注册、忘记密码不包含可以保持原样。
-
-  * 底部导航tab页面命名  
-  tab-column1 –第一个栏目  
-  tab-column2 –第二个栏目  
-  tab-column3 –第三个栏目  
-  tab-column4 –第四个栏目  
-  * tab栏下分支页面命名  
-  column1-xxx  
-  column2-xxx  
-  column3-xxx  
-  column4-xxx  
-
-2. 控制器、服务命名(controllers，services)  
-对象命名首字母大写：HomeCtrl，LoginService  
-方法命名首字母小写：methodHome  
-每行代码后加分号“;”  
+其中包含的方法名，首字母小写，例：
+nameMethod   
 
 3. css 使用（scss）  
 可协同编写scss，创建成员样式  
