@@ -314,6 +314,7 @@ gulp build
 
 ### 编码要求
 1. 命名
+
 * 导航tab栏命名  
 在底部导航tab四栏中为所以页面的首页，请使用前缀“前缀-”,在导航之外页面比如：登录、注册、忘记密码不包含可以自定义名称。
 例：  
@@ -328,15 +329,12 @@ column3-xxx
 column4-xxx 
 
 * 控制器&服务命名(controllers，services)  
-
 首字母大写，例：
 HomeCtrl
 LoginService  
+ 
 
-其中包含的方法名，首字母小写，例：
-nameMethod   
-
-3. css 使用（scss）  
+2. css 使用（scss）  
 可协同编写scss，创建成员样式  
 ionic.app.scss –公共样式  
 ionic.xx1.scss –开发成员1  
