@@ -331,8 +331,6 @@ gulp build
   首字母大写，例：
   HomeCtrl
   LoginService  
- 
-
 2. css 使用（scss）  
 可协同编写scss，创建成员样式  
 ionic.app.scss –公共样式  
