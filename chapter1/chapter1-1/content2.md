@@ -332,7 +332,7 @@ gulp build
     ```
     * 控制器&服务命名(controllers，services)  
     首字母大写，例：  
-    HomeCtrl
+    HomeCtrl  
     LoginService  
     
 2. css 使用（scss）  
