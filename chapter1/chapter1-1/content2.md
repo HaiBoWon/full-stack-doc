@@ -332,8 +332,10 @@ gulp build
     ```
     * 控制器&服务命名(controllers，services)  
     首字母大写，例：  
+    ```
     HomeCtrl  
-    LoginService  
+    LoginService 
+    ``` 
     
 2. css 使用（scss）  
 可协同编写scss，创建成员样式  
