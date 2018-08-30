@@ -365,15 +365,9 @@ ionic.xx2.scss –开发成员2
 正例：    
 ```javascript
   .controller('CaseLoadingCtrl',function($scope,$timeout){
-    $scope.gotoSession = function() {
-      /* ... */
-    };
-    $scope.refresh = function() {
-      /* ... */
-    };
-    $scope.search = function() {
-      /* ... */
-    };
+    $scope.gotoSession = gotoSession;
+    $scope.refresh = refresh;
+    $scope.search = search;
     $scope.sessions = [];
     $scope.title = 'Sessions';
     
