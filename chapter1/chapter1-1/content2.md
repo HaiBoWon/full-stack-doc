@@ -208,8 +208,8 @@ gulp build
 |   --- app.js                              --- 页面跳转路由配置
 |   --- config.js                           --- 项目基础配置
 |   --- controllers.js                      --- 全局控制初始化设置
-|   --- services.js                         --- 全局服务包含统一请求处理和小工具
-|   --- widget.js                           --- 自定义标签或者属性小工具
+|   --- services.js                         --- 全局服务包含统一请求处理和工具类
+|   --- widget.js                           --- 自定义标签或者属性组件
 ```
 
 ### WebViewJavascriptBridge开发
