@@ -347,7 +347,7 @@ ionic.xx2.scss –开发成员2
 4. 函数和接口书写规范(controllers，services)
 
 把可绑定的成员放到顶部，在可绑定成员下面定义函数（这些函数被提出来），把具体的实现细节放到下面，提高代码的可读性。
-
+反例：  
 ```javascript
   .controller('CaseLoadingCtrl',function($scope,$timeout){
     $scope.gotoSession = function() {
@@ -363,4 +363,35 @@ ionic.xx2.scss –开发成员2
     $scope.title = 'Sessions';
   })
 ```
+正例：    
+```javascript
+  .controller('CaseLoadingCtrl',function($scope,$timeout){
+    $scope.gotoSession = function() {
+      /* ... */
+    };
+    $scope.refresh = function() {
+      /* ... */
+    };
+    $scope.search = function() {
+      /* ... */
+    };
+    $scope.sessions = [];
+    $scope.title = 'Sessions';
+    
+    /////
+    
+    function gotoSession(){
+      /* ... */
+    }
+    
+    function refresh(){
+      /* ... */
+    }
+
+    function search(){
+      /* ... */
+    }
+  })
+```
+
 
