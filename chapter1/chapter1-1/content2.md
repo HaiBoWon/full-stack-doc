@@ -344,7 +344,7 @@ ionic.xx1.scss –开发成员1
 ionic.xx2.scss –开发成员2  
 关于公共样式的时候，当开发中觉得有必要可以升级为公共样式，可以相互沟通下然后剥离放入ionic.app.scss  
 
-3. 函数和接口书写规范(controllers，services)
+3. 函数和接口书写规范(controllers，services)  
 把可绑定的成员放到顶部，在可绑定成员下面定义函数（这些函数被提出来），把具体的实现细节放到下面，提高代码的可读性。  
 反例：  
 ```javascript
